@@ -16,7 +16,6 @@ class HomeActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            Text(text = "eeeeeeeeeeeee")
             val data : MutableState<String> = remember { mutableStateOf("") }
             Messenger("Send",data){
                 SendDatatoCommunicationManger(data = data.value)
